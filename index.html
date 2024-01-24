@@ -18,10 +18,6 @@ height: 400px;
 <model-viewer id="model-viewer"
   src="shnjacka.glb"
   ar ar-modes="scene-viewer webxr"
-
-  ios-src="shnjacka.glb"
-  ar
-  
   camera-controls touch-action="pan-y"
   alt="A 3D model of an astronaut" shadow-intensity="2"
   poster="Logo (1).png"
@@ -39,7 +35,37 @@ height: 400px;
     <!-- position: absolute; --> 
     top: 32px; 
     right: 32px;
-    text-align: center;">
+    text-align: center;
+    width: 80px;
+    height: 40px;">
+     Activate AR
+  </button>
+</model-viewer>
+
+    <model-viewer id="model-viewer"
+     ios-src="shnjacka.glb"
+     ar
+  
+  camera-controls touch-action="pan-y"
+  alt="A 3D model of an astronaut" shadow-intensity="1"
+  poster="Logo (1).png"
+  
+ <!-- skybox-image="../../shared-assets/environments/spruit_sunrise_1k_HDR.jpg"
+ skybox-height="2m" max-camera-orbit="auto 90deg auto"> -->
+  
+  
+  <div id="error" class="hide">AR is not supported on this device</div>
+  <button 
+    slot="ar-button" 
+    style="background-color: white;
+    border-radius: 4px; 
+    border: none; 
+    <!-- position: absolute; --> 
+    top: 32px; 
+    right: 32px;
+    text-align: center;
+    width: 80px;
+    height: 40px">
      Activate AR
   </button>
 </model-viewer>
